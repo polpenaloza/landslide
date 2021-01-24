@@ -1,9 +1,14 @@
 {
   "npmScope": "landslide",
-  "affected": { "defaultBase": "master" },
+  "affected": {
+    "defaultBase": "main"
+  },
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -11,12 +16,22 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "accessToken": "YTIxZmIzMDctMThjMC00NzcyLWJjNzAtMDc3ODA1MTc5NGQ2fHJlYWQtd3JpdGU=",
+        "cacheableOperations": ["build", "test", "lint", "e2e"],
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
     }
   },
   "projects": {
-    "sumbank": { "tags": [] },
-    "sumbank-e2e": { "tags": [], "implicitDependencies": ["sumbank"] }
+    "sumbank": {
+      "tags": []
+    },
+    "sumbank-e2e": {
+      "tags": [],
+      "implicitDependencies": ["sumbank"]
+    }
   }
 }
