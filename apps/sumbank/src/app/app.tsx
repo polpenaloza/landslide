@@ -1,17 +1,17 @@
-import React from 'react'
-import { Box, Container } from '@chakra-ui/react'
+import React, { Suspense } from 'react'
+import { Box, Center, Container } from '@chakra-ui/react'
 
-import { ReactComponent as Logo } from './logo.svg'
+import { UiHeader } from '@landslide/ui-header'
 
 export function App() {
   return (
     <Container maxW="2xl" centerContent>
-      <Box>
-        <Logo width="75" height="75" />
+      <Box p={2}>
+        <UiHeader name="Dan Abrahmov" src="https://bit.ly/dan-abramov" />
       </Box>
-      <Box bg="brand.100" w="100%" p={4} color="white">
+      <Center bg="brand.100" w="100%" p={4} color="white">
         Welcome to sumbank
-      </Box>
+      </Center>
       <Box>
         <p>Thank you for using and showing some ♥ for Nx.</p>
       </Box>

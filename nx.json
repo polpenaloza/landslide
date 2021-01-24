@@ -1,14 +1,9 @@
 {
   "npmScope": "landslide",
-  "affected": {
-    "defaultBase": "main"
-  },
+  "affected": { "defaultBase": "main" },
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -26,12 +21,8 @@
     }
   },
   "projects": {
-    "sumbank": {
-      "tags": []
-    },
-    "sumbank-e2e": {
-      "tags": [],
-      "implicitDependencies": ["sumbank"]
-    }
+    "sumbank": { "tags": [] },
+    "sumbank-e2e": { "tags": [], "implicitDependencies": ["sumbank"] },
+    "ui-header": { "tags": [] }
   }
 }
