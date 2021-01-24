@@ -8,9 +8,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/web:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/sumbank",
             "index": "apps/sumbank/src/index.html",
@@ -64,16 +62,12 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/sumbank/**/*.{ts,tsx,js,jsx}"
-            ]
+            "lintFilePatterns": ["apps/sumbank/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/sumbank"
-          ],
+          "outputs": ["coverage/apps/sumbank"],
           "options": {
             "jestConfig": "apps/sumbank/jest.config.js",
             "passWithNoTests": true
@@ -102,9 +96,7 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/sumbank-e2e/**/*.{js,ts}"
-            ]
+            "lintFilePatterns": ["apps/sumbank-e2e/**/*.{js,ts}"]
           }
         }
       }
@@ -117,27 +109,18 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "libs/ui-header/**/*.{ts,tsx,js,jsx}"
-            ]
+            "lintFilePatterns": ["libs/ui-header/**/*.{ts,tsx,js,jsx}"]
           }
         },
         "build": {
           "executor": "@nrwl/web:package",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/libs/ui-header",
             "tsConfig": "libs/ui-header/tsconfig.lib.json",
             "project": "libs/ui-header/package.json",
             "entryFile": "libs/ui-header/src/index.ts",
-            "external": [
-              "react",
-              "react-dom",
-              "react-is",
-              "styled-components"
-            ],
+            "external": ["react", "react-dom", "react-is", "styled-components"],
             "babelConfig": "@nrwl/react/plugins/bundle-babel",
             "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
             "assets": [
@@ -151,9 +134,7 @@
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/libs/ui-header"
-          ],
+          "outputs": ["coverage/libs/ui-header"],
           "options": {
             "jestConfig": "libs/ui-header/jest.config.js",
             "passWithNoTests": true
